@@ -15,6 +15,6 @@ jobs:
         uses: checkmarx/kics-action@master
         with:
           directory: 'terraform'
-      - name: Display results
+      - name: Display results 
       run: |
         cat results.json
