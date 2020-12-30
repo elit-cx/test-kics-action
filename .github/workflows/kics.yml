@@ -14,7 +14,8 @@ jobs:
       - name: kics Scan
         uses: checkmarx/kics-action@test
         with:
-          directory: 'terraform'
+          path: 'terraform'
+          verbose: true
       - name: Display results 
         run: |
           cat results.json
