@@ -15,6 +15,7 @@ jobs:
         uses: checkmarx/kics-action@test
         with:
           path: 'terraform'
+          output_path: 'results.json' 
           verbose: true
       - name: Display results 
         run: |
