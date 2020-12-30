@@ -16,5 +16,5 @@ jobs:
         with:
           directory: 'terraform'
       - name: Display results 
-      run: |
-        cat results.json
+        run: |
+          cat results.json
