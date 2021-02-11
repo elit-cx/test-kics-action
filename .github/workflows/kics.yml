@@ -13,9 +13,9 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: kics Scan 
-        uses: checkmarx/kics-action@v1.0
+        uses: checkmarx/kics-action@develop
         with:
-          path: 'terraform'
+          path: '.'
           output_path: 'results.json'
           verbose: true
       - name: Display results 
