@@ -23,5 +23,5 @@ jobs:
           cat results.json
       - name: Display Counters
         run: |
-          cat result.json | jq '.severity_counters'
+          cat results.json | jq '.severity_counters'
            
