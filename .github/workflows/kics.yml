@@ -6,7 +6,7 @@ on:
       - master
 jobs:
   kics-scan:
-    name: kics
+    name: kics 
     runs-on: ubuntu-latest 
     steps:
       - uses: actions/checkout@v2
