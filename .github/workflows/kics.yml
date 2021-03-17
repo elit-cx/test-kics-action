@@ -19,7 +19,7 @@ jobs:
           output_path: 'kics-results.sarif'
           verbose: true
       - name: Sarif to md
-        uses: elit-cx/sarif-to-md-gh-action@v1
+        uses: elit-cx/sarif-to-md-gh-action@master
         with:
           sarifReport: kics-results.sarif
       - name: Display results 
