@@ -12,6 +12,12 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Set short hash
+        id: set-short-hash
+        run: echo "::set-output name=short-sha::$(echo ${GITHUB_SHA} | cut -c1-8)"
+      - name: echo short hash
+        run: |
+           echo ${{ steps.set-short-hash.short-sha }}
       - name: kics Scan  
         uses: checkmarx/kics-action@docker-runner
         with:
