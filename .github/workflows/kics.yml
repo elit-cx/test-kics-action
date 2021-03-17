@@ -23,12 +23,6 @@ jobs:
         uses: elit-cx/sarif-to-md-gh-action@master
         with:
           sarifReport: kics-results.sarif
-      - name: Comment PR
-        uses: harupy/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          filename: ${{ steps.sarifmd.outputs.mdFile }}
       - name: Display results 
         run: |
           cat kics-results.sarif
