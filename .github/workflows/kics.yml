@@ -23,6 +23,7 @@ jobs:
         uses: elit-cx/sarif-to-md-gh-action@master
         with:
           sarifReport: kics-results.sarif
+          token: ${{ secrets.GITHUB_TOKEN }}
       - name: Display results 
         run: |
           cat kics-results.sarif
